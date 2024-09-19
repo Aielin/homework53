@@ -23,11 +23,15 @@ const App = () => {
       setTasks([...tasks, newTask]);
   };
 
+  const deleteTask = (taskId: string) => {
+      setTasks(tasks.filter((task) => task.id !== taskId));
+  };
+
   return (
       <div>
           <h1>ToDo list</h1>
           <AddTaskForm onAddTask={addTask} />
-          <TaskList tasks={tasks} />
+          <TaskList tasks={tasks} onDeleteTask={deleteTask} />
       </div>
   );
 }
