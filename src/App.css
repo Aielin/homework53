@@ -46,7 +46,7 @@ li{
   color: red;
 }
 
-input{
+.task-input {
   padding: 12px;
   margin-right: 10px;
   width: calc(100% - 100px);
